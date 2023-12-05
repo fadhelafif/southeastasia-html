@@ -11,6 +11,12 @@
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
     <!-- endbuild -->
+    <!-- build:css styles/fontawesome.css -->
+    <link href="./node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet"/>
+    <!-- endbuild -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Figtree:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -22,46 +28,297 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills float-right">
-          <li class="nav-item">
-            <a href="#" class="nav-link active">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Contact</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">southeastasia html</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1 class="display-3">'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+    <div id="header-wrapper">
+      <div class="container">
+        <div class="header">
+          <div class="menu-menux-container">
+            <ul id="menu-menux" class="nav nav-pills float-right">
+              <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+                <ul class="sub-menu dropdown-menu">
+                  <li class="menu-item">
+                    <a href="#" class="nav-link drop-item">About</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="nav-link drop-item">Work with us</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Our Work</a>
+                <ul class="sub-menu dropdown-menu">
+                  <li class="menu-item">
+                    <a href="#" class="nav-link drop-item">Our Work</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="nav-link drop-item">News and Insights</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Programmes</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="logo"><a href="index.html"></a><img src="images/logo.png" alt=""></div>
         </div>
       </div>
-
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+    </div>
+    <div id="wrapper">
+      <div class="home-section-top pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>The Southeast Asia Public Policy Institute supports the development of solutions to the most pressing public policy challenges facing Southeast Asia in the 21st century through research and dialogue.</h1>
+              <div class="link link-purple link-arrow-green"><a href="about.html"><span>About Us</span></a></div>
+            </div>
+            <div class="col-md-6">
+              <img src="images/img-flag.png" alt="" >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-section-2 py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="img"><img src="images/home_city.jpg" alt=""></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="column-right">
+                    <h6>What We Do</h6>
+                    <p>The Institute undertakes in-depth research to develop actionable policy solutions to the region’s most pressing challenges.</p>
+                    <p>We convene dialogues with stakeholders and decision-makers to drive discussion on the policy challenges and opportunities across the region.</p>
+                    <a href="work-with-us.html">Work with Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-section-3 py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h1>Our Programmes</h1>
+            </div>
+            <div class="col-md-4">
+              <div class="column-list">
+                <div class="title">
+                  <h6><a href="our-programmes-detail.html">Circular ASEAN</a></h6>
+                </div>
+                <div class="desc">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                </div>
+                <div class="more">
+                  <h6><a href="our-programmes-detail.html">Learn More</a></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="column-list">
+                <div class="title">
+                  <h6><a href="our-programmes-detail.html">AI/ASEAN Programme</a></h6>
+                </div>
+                <div class="desc">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                </div>
+                <div class="more">
+                  <h6><a href="our-programmes-detail.html">Learn More</a></h6>
+                </div>
+              </div>
+              <div class="column-list">
+                <div class="title">
+                  <h6><a href="our-programmes-detail.html">Programming ASEAN’s Digital Economy</a></h6>
+                </div>
+                <div class="desc">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                </div>
+                <div class="more">
+                  <h6><a href="our-programmes-detail.html">Learn More</a></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-section-4 py-5">
+        <div class="container">
+          <div class="title-section">
+            <div class="row">
+              <h6>our work</h6>
+            </div>
+          </div>
+          <div class="list-column-wrapper">
+            <div class="list-column">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="left-column">
+                    <h6>Topic</h6>
+                    <p>01 Jan 1970</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="center-column">
+                    <div class="title">
+                      <h1><a href="our-work.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h1>
+                    </div>
+                    <div class="desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                    <div class="more"><a href="our-work.html">Read More</a></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="img"><img src="images/thumbs_ourwork1.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <div class="list-column">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="left-column">
+                    <h6>Topic</h6>
+                    <p>01 Jan 1970</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="center-column">
+                    <div class="title">
+                      <h1><a href="our-work.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h1>
+                    </div>
+                    <div class="desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                    <div class="more"><a href="our-work.html">Read More</a></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="img"><img src="images/thumbs_ourwork2.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <div class="list-column">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="left-column">
+                    <h6>Topic</h6>
+                    <p>01 Jan 1970</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="center-column">
+                    <div class="title">
+                      <h1><a href="our-work.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h1>
+                    </div>
+                    <div class="desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                    <div class="more"><a href="our-work.html">Read More</a></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="img"><img src="images/thumbs_ourwork3.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <div class="all"><a href="our-work.html">See All Work</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="home-section-5 py-5">
+        <div class="container">
+          <div class="title-section">
+            <div class="row">
+              <h6>News and insights</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="block">
+                <div class="img"><a href="news-detail.html"></a><img src="images/thumbs_news1.png" alt=""></div>
+                <div class="tag-wrap"><h6>Topic <span>01 Jan 1970</span></h6></div>
+                <div class="title">
+                  <h2><a href="news-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h2>
+                </div>
+                <div class="author"><p>by Author 1, Author 2 and Author 3</p></div>
+                <div class="more"><a href="news-detail.html">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="block">
+                <div class="img"><a href="news-detail.html"></a><img src="images/thumbs_news2.png" alt=""></div>
+                <div class="tag-wrap"><h6>Topic <span>01 Jan 1970</span></h6></div>
+                <div class="title">
+                  <h2><a href="news-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h2>
+                </div>
+                <div class="author"><p>by Author 1, Author 2 and Author 3</p></div>
+                <div class="more"><a href="news-detail.html">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="block">
+                <div class="img"><a href="news-detail.html"></a><img src="images/thumbs_news3.jpg" alt=""></div>
+                <div class="tag-wrap"><h6>Topic <span>01 Jan 1970</span></h6></div>
+                <div class="title">
+                  <h2><a href="news-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h2>
+                </div>
+                <div class="author"><p>by Author 1, Author 2 and Author 3</p></div>
+                <div class="more"><a href="news-detail.html">Read More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-wrapper" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="logo-bottom"><img src="images/logo-bottom.png" alt=""></div>
+          </div>
+          <div class="col-md-9">
+            <div class="column-footer">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2>We are based in Southeast Asia, with offices in Singapore and Bangkok.</h2>
+                </div>
+                <div class="col-md-2">
+                  <div class="block">
+                    <div class="title-block"><h6>Singapore</h6></div>
+                    <div class="column">+65 6471 5269</div>
+                  </div>
+                  <div class="block">
+                    <div class="title-block"><h6>Bangkok</h6></div>
+                    <div class="column">+66 2 255 2578</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="block">
+                    <div class="title-block"><h6>Email</h6></div>
+                    <div class="column"><a href="mailto:contact@seapublicpolicy.org">contact@seapublicpolicy.org</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="after-column mt-5 pt-3">
+                <div class="row">
+                  <div class="column-left col-md-6">
+                    <p>Copyright &copy; 2023</p>
+                  </div>
+                  <div class="column-right col-md-6 text-md-right">
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

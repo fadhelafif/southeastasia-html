@@ -1,87 +1,129 @@
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+$grey: #1D1F53;
+$indigoBlue: #1D1F53;
 
-/* Space out content a bit */
-body {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-/* Custom page header */
-.header {
-  padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 3rem;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 1.5rem;
-  color: #777;
-  border-top: .05rem solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 48em) {
-  .container {
-    max-width: 46rem;
+.container{
+  @media screen and (min-width:1400px) {
+    max-width: 1320px;
   }
 }
-.container-narrow > hr {
-  margin: 2rem 0;
+
+
+.link-purple{
+  text-transform: uppercase;
+  a{
+    background: $indigoBlue;
+    padding: 20px 30px;
+    border-radius: 50px;
+    min-width: 153px;
+    display: inline-block;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Arsenal', sans-serif;
+    font-family: 'Figtree', sans-serif;
+    font-family: 'Inter', sans-serif;
+    span{
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+    &::before{
+      position: absolute;
+      content: '';
+      width: 26px;
+      height: 24px;
+      left: -50px;
+      top: 30%;
+      transition: transform 0.3s;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      width: 26px;
+      height: 24px;
+      right: 25px;
+      top: 30%;
+      transition: transform 0.3s;
+    }
+  }
+  &.link-arrow-green{
+    position: relative;
+    a{
+      &:hover{
+        span{
+          transform: translateX(35px);
+        }
+        &::before{
+          transform: translateX(60px);
+        }
+        &::after{
+          transform: translateX(50px);
+        }
+      }
+      &::before{
+        background: url(../images/arrow-blue.png) no-repeat;
+      }
+      &::after{
+        background: url(../images/arrow-blue.png) no-repeat;
+      }
+    }
+  }
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: .05rem solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: .75rem 1.5rem;
-  font-size: 1.5rem;
+#header-wrapper{
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 3rem 0;
-}
-.marketing p + h4 {
-  margin-top: 1.5rem;
+#footer-wrapper{
+  background: #1D1F53;
+  color: #fff;
+  .column-footer{
+    .block{
+      .title-block{
+        color: #56E7D2;
+      }
+      a{
+        color: #fff;
+      }
+    }
+    .after-column{
+      border-top: 1px solid #56E7D2;
+    }
+  }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 48em) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
+// home
+.home-section-top{
+  background: url(../images/bg-blue.png) no-repeat;
+  background-size: cover;
+}
+
+.home-section-2{
+  .column-right{
+    h6{
+      color: #56E7D2;
+      font-weight: 700;
+    }
+    p{
+      font-family: 'Arsenal', sans-serif;
+      font-family: 'Figtree', sans-serif;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: $grey;
+    }
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 2rem;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+}
+
+.home-section-3{
+  background: var(--Gradient-Mint, linear-gradient(248deg, rgba(86, 231, 209, 0.28) 0%, rgba(86, 231, 210, 0.16) 16.15%, rgba(86, 231, 210, 0.12) 33.39%, rgba(86, 231, 210, 0.07) 67.92%, rgba(86, 231, 210, 0.05) 100%), #FFF);
+}
+
+.home-section-4{
+  background: #1D1F53;
+  color: #fff;
 }
