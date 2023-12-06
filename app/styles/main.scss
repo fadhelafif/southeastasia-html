@@ -129,6 +129,11 @@ body{
       font-size: 14px;
       a{
         color: $white;
+        &:hover{
+          svg{
+            color: $greenLight;
+          }
+        }
         svg{
           font-size: 24px;
         }
@@ -469,6 +474,139 @@ body{
       a{
         color: $greenLight;
         text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+// about
+.about-section-top{
+  .column-left{
+    h1{
+      font-family: 'Chronicle Display Normal';
+      font-weight: 325;
+      font-size: 64px;
+    }
+    .desc{
+      p{
+        line-height: 175%;
+      }
+    }
+  }
+}
+
+.about-section-2{
+  background: $indigoBlue;
+  color: $white;
+  .title-section{
+    h6{
+      color: $greenLight;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 1.6px;
+    }
+  }
+  .column{
+    .title-column{
+      h1{
+        font-family: 'Chronicle Display Normal';
+        font-weight: 325;
+        font-size: 32px;
+        line-height: 164%;
+      }
+    }
+    p{
+      font-weight: 325;
+      font-size: 16px;
+    }
+  }
+}
+
+.about-section-3{
+  .title-column{
+    h1{
+      font-family: 'Chronicle Display Normal';
+      font-weight: 325;
+      font-size: 48px;
+      line-height: 125%;
+      color: $indigoBlue;
+    }
+  }
+  .main-column-wrapper{
+    .title-section{
+      h6{
+        color: $greenLight;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+    .main-column{
+      color: $indigoBlue;
+      border-bottom: 1px solid rgba(29, 31, 83, 0.15);
+      .name{
+        h2{
+          font-family: 'Chronicle Display Normal';
+          font-weight: 325;
+          font-size: 28px;
+          line-height: 125%;
+        }
+      }
+      .position{
+        color: rgba(117, 120, 128, 0.70);
+        font-size: 14px;
+      }
+    }
+    .list-team{
+      border-bottom: 1px solid rgba(29, 31, 83, 0.15);
+      .block{
+        .nama{
+          margin-top: 15px;
+          h5{
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+        .position{
+          color: rgba(117, 120, 128, 0.70);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.about-section-4{
+  background: var(--Gradient-Mint, linear-gradient(248deg, rgba(86, 231, 209, 0.28) 0%, rgba(86, 231, 210, 0.16) 16.15%, rgba(86, 231, 210, 0.12) 33.39%, rgba(86, 231, 210, 0.07) 67.92%, rgba(86, 231, 210, 0.05) 100%), #FFF);
+  .img-map{
+    height: 100%;
+    width: 100%;
+    img{
+      margin-left: -3rem;
+    }
+  }
+  .title{
+    h1{
+      font-family: 'Chronicle Display Normal';
+      font-size: 48px;
+    }
+  }
+  .desc{
+    p{
+      line-height: 175%;
+    }
+  }
+  .list-network-wrapper{
+    .title-left{
+      padding-top: 35px;
+      h6{
+        color: $greenLight;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
       }
     }
   }
