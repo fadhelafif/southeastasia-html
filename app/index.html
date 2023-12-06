@@ -28,7 +28,47 @@
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div id="header-wrapper">
+    <nav class="navbar fixed-top navbar-expand-md navbar-light w-100">
+      <div class="container">
+        <div class="logo"><a href="index.html"></a><img src="images/logo.png" alt=""></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul id="menu-menux" class="nav nav-pills ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+              <ul class="sub-menu dropdown-menu">
+                <li class="menu-item">
+                  <a href="#" class="nav-link drop-item">About</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="nav-link drop-item">Work with us</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Our Work</a>
+              <ul class="sub-menu dropdown-menu">
+                <li class="menu-item">
+                  <a href="#" class="nav-link drop-item">Our Work</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="nav-link drop-item">News and Insights</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Programmes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <div id="header-wrapper">
       <div class="container">
         <div class="header">
           <div class="menu-menux-container">
@@ -66,7 +106,7 @@
           <div class="logo"><a href="index.html"></a><img src="images/logo.png" alt=""></div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div id="wrapper">
       <div class="home-section-top pt-5">
         <div class="container">
@@ -106,7 +146,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <h1>Our Programmes</h1>
+              <div class="title-left">
+                <h1>Our Programmes</h1>
+              </div>
             </div>
             <div class="col-md-4">
               <div class="column-list">
@@ -151,12 +193,10 @@
       <div class="home-section-4 py-5">
         <div class="container">
           <div class="title-section">
-            <div class="row">
-              <h6>our work</h6>
-            </div>
+            <h6>our work</h6>
           </div>
           <div class="list-column-wrapper">
-            <div class="list-column">
+            <div class="list-column pb-5 mb-5">
               <div class="row">
                 <div class="col-md-3">
                   <div class="left-column">
@@ -176,11 +216,11 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="img"><img src="images/thumbs_ourwork1.jpg" alt=""></div>
+                  <div class="img"><a href="our-work.html"><img src="images/thumbs_ourwork1.jpg" alt=""></a></div>
                 </div>
               </div>
             </div>
-            <div class="list-column">
+            <div class="list-column pb-5 mb-5">
               <div class="row">
                 <div class="col-md-3">
                   <div class="left-column">
@@ -200,11 +240,11 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="img"><img src="images/thumbs_ourwork2.jpg" alt=""></div>
+                  <div class="img"><a href="our-work.html"><img src="images/thumbs_ourwork2.jpg" alt=""></a></div>
                 </div>
               </div>
             </div>
-            <div class="list-column">
+            <div class="list-column pb-5 mb-5">
               <div class="row">
                 <div class="col-md-3">
                   <div class="left-column">
@@ -224,7 +264,7 @@
                   </div>
                 </div>
                 <div class="col-md-3">
-                  <div class="img"><img src="images/thumbs_ourwork3.jpg" alt=""></div>
+                  <div class="img"><a href="our-work.html"><img src="images/thumbs_ourwork3.jpg" alt=""></a></div>
                 </div>
               </div>
             </div>
@@ -237,15 +277,13 @@
       <div class="home-section-5 py-5">
         <div class="container">
           <div class="title-section">
-            <div class="row">
-              <h6>News and insights</h6>
-            </div>
+            <h6>News and insights</h6>
           </div>
           <div class="row">
             <div class="col-md-4">
-              <div class="block">
-                <div class="img"><a href="news-detail.html"></a><img src="images/thumbs_news1.png" alt=""></div>
-                <div class="tag-wrap"><h6>Topic <span>01 Jan 1970</span></h6></div>
+              <div class="block p-4">
+                <div class="img"><a href="news-detail.html"><img src="images/thumbs_news1.png" alt=""></a></div>
+                <div class="tag-wrap pt-2"><h6>Topic <span>01 Jan 1970</span></h6></div>
                 <div class="title">
                   <h2><a href="news-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h2>
                 </div>
@@ -254,9 +292,9 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="block">
-                <div class="img"><a href="news-detail.html"></a><img src="images/thumbs_news2.png" alt=""></div>
-                <div class="tag-wrap"><h6>Topic <span>01 Jan 1970</span></h6></div>
+              <div class="block p-4">
+                <div class="img"><a href="news-detail.html"><img src="images/thumbs_news2.png" alt=""></a></div>
+                <div class="tag-wrap pt-2"><h6>Topic <span>01 Jan 1970</span></h6></div>
                 <div class="title">
                   <h2><a href="news-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h2>
                 </div>
@@ -265,9 +303,9 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="block">
-                <div class="img"><a href="news-detail.html"></a><img src="images/thumbs_news3.jpg" alt=""></div>
-                <div class="tag-wrap"><h6>Topic <span>01 Jan 1970</span></h6></div>
+              <div class="block p-4">
+                <div class="img"><a href="news-detail.html"><img src="images/thumbs_news3.jpg" alt=""></a></div>
+                <div class="tag-wrap pt-2"><h6>Topic <span>01 Jan 1970</span></h6></div>
                 <div class="title">
                   <h2><a href="news-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></h2>
                 </div>
@@ -295,7 +333,7 @@
                   <h2>We are based in Southeast Asia, with offices in Singapore and Bangkok.</h2>
                 </div>
                 <div class="col-md-2">
-                  <div class="block">
+                  <div class="block mb-4">
                     <div class="title-block"><h6>Singapore</h6></div>
                     <div class="column">+65 6471 5269</div>
                   </div>

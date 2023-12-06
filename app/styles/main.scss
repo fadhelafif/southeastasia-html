@@ -41,12 +41,57 @@ body{
   }
 }
 
+// header and footer
+#header-wrapper{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+#footer-wrapper{
+  background: #1D1F53;
+  color: #fff;
+  .column-footer{
+    h2{
+      font-family: 'Chronicle Display Normal';
+      font-weight: 325;
+      font-size: 28px;
+      @media screen and (min-width:1440px) {
+        width: 78%;
+      }
+    }
+    .block{
+      .title-block{
+        color: $greenLight;
+        font-size: 14px;
+      }
+      .column{
+        font-size: 14px;
+      }
+      a{
+        color: #fff;
+      }
+    }
+    .after-column{
+      border-top: 1px solid $greenLight;
+      font-size: 14px;
+      a{
+        color: $white;
+        i{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+// end
 
 .link-button{
   text-transform: uppercase;
 
   a{
-    padding: 20px 30px;
+    padding: 20px 67px 20px 30px;
     border-radius: 50px;
     min-width: 153px;
     display: inline-block;
@@ -134,18 +179,6 @@ body{
     }
   }
 
-  &.w-184{
-    a{
-      width: 185px;
-    }
-  }
-
-  &.w-200{
-    a{
-      width: 270px;
-    }
-  }
-
   &.link-white{
     a{
       border: 1px solid rgba(29, 31, 83, 0.30);
@@ -172,30 +205,7 @@ body{
 }
 
 
-#header-wrapper{
-  position: -webkit-sticky; /* Safari & IE */
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
 
-#footer-wrapper{
-  background: #1D1F53;
-  color: #fff;
-  .column-footer{
-    .block{
-      .title-block{
-        color: $greenLight;
-      }
-      a{
-        color: #fff;
-      }
-    }
-    .after-column{
-      border-top: 1px solid $greenLight;
-    }
-  }
-}
 
 // home
 .home-section-top{
@@ -221,9 +231,172 @@ body{
 
 .home-section-3{
   background: var(--Gradient-Mint, linear-gradient(248deg, rgba(86, 231, 209, 0.28) 0%, rgba(86, 231, 210, 0.16) 16.15%, rgba(86, 231, 210, 0.12) 33.39%, rgba(86, 231, 210, 0.07) 67.92%, rgba(86, 231, 210, 0.05) 100%), #FFF);
+  color: $indigoBlue;
+  .title-left{
+    h1{
+      font-family: "Chronicle Display Normal"; 
+      font-size: 48px;
+      font-weight: 325; 
+    }
+  }
+  .column-list{
+    .title{
+      h6{
+        font-weight: 600;
+        font-family: Inter; 
+        a{
+          color: $indigoBlue;
+          text-decoration: none;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover{
+            color: $greenLight;
+          }
+        }
+      }
+    }
+    .desc{
+      font-size: 14px;
+    }
+    .more{
+      h6{
+        text-transform: uppercase;
+        font-size: 12px;
+        a{
+          color: $greenLight;
+        }
+      }
+    }
+  }
 }
 
 .home-section-4{
   background: #1D1F53;
   color: #fff;
+  .title-section{
+    h6{
+      color: $greenLight;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+  .list-column-wrapper{
+    .list-column{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      .left-column{
+        font-size: 12px;
+        h6{
+          font-size: 12px;
+        }
+        p{
+          color: #E0E0E099;
+        }
+      }
+      .center-column{
+        .title{
+          h1{
+            font-family: "Chronicle Display Normal"; 
+            font-size: 28px;
+            font-weight: 325; 
+            a{
+              color: $white;
+            }
+          }
+        }
+        .desc{
+          font-size: 14px;
+        }
+        .more{
+          font-size: 12px;
+          a{
+            color: $greenLight;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .img{
+        overflow: hidden;
+        position: relative;
+        a{
+          display: block;
+          &:hover{
+            img{
+              transform: scale(1.2);
+            }
+          }
+          img{
+            transition: transform 0.3s ease;
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+          
+          
+        }
+      }
+    }
+  }
+}
+
+.home-section-5{
+  .title-section{
+    h6{
+      color: $greenLight;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+  .block{
+    border-left: 1px solid rgba(29, 31, 83, 0.15);
+    .img{
+      overflow: hidden;
+      position: relative;
+      a{
+        display: block;
+        &:hover{
+          img{
+            transform: scale(1.2);
+          }
+        }
+        img{
+          transition: transform 0.3s ease;
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }  
+    }
+    .tag-wrap{
+      h6{
+        color: $indigoBlue;
+        span{
+          font-weight: 300;
+          color: #757880B2;
+          margin-left: 10px;
+        }
+      }
+    }
+    .title{
+      h2{
+        font-family: 'Chronicle Display Normal';
+        font-weight: 325;
+        font-size: 21px;
+        a{
+          color: $indigoBlue;
+        }
+      }
+    }
+    .author{
+      font-size: 12px;
+    }
+    .more{
+      font-size: 12px;
+      a{
+        color: $greenLight;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
