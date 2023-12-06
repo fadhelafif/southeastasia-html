@@ -211,10 +211,28 @@ body{
 .home-section-top{
   background: url(../images/bg-blue.png) no-repeat;
   background-size: cover;
-  h1{
-    font-family: 'Chronicle Display Normal';
-    font-weight: 400;
+  overflow: hidden;
+  .column-left{
+    margin-top: 5rem;
+    h1{
+      font-family: 'Chronicle Display Normal';
+      font-weight: 325;
+      font-size: 32px;
+      letter-spacing: 1px;
+      line-height: 164%;
+    }
   }
+  .img-flag{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    img{
+      position: absolute;
+      top: 0;
+      right: -3rem;
+    }
+  }
+  
 }
 
 .home-section-2{
@@ -237,9 +255,13 @@ body{
       font-family: "Chronicle Display Normal"; 
       font-size: 48px;
       font-weight: 325; 
+      span{
+        display: block;
+      }
     }
   }
   .column-list{
+    border-bottom: 1px solid rgba(29, 31, 83, 0.15);
     .title{
       h6{
         font-weight: 600;
