@@ -1,5 +1,39 @@
 $grey: #1D1F53;
 $indigoBlue: #1D1F53;
+$white: #fff;
+$greenLight: #56E7D2;
+
+@font-face {
+  font-family: 'Chronicle Display';
+  src: url('../fonts/ChronicleDisplay-Black.eot');
+  src: url('../fonts/ChronicleDisplay-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ChronicleDisplay-Black.woff2') format('woff2'),
+      url('../fonts/ChronicleDisplay-Black.woff') format('woff'),
+      url('../fonts/ChronicleDisplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chronicle Display Normal';
+  src: url('../fonts/ChronicleDisplay-Roman.eot');
+  src: url('../fonts/ChronicleDisplay-Roman.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ChronicleDisplay-Roman.woff2') format('woff2'),
+      url('../fonts/ChronicleDisplay-Roman.woff') format('woff'),
+      url('../fonts/ChronicleDisplay-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body{
+  font-family: 'Arsenal', sans-serif;
+  font-family: 'Figtree', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
 
 .container{
   @media screen and (min-width:1400px) {
@@ -8,15 +42,15 @@ $indigoBlue: #1D1F53;
 }
 
 
-.link-purple{
+.link-button{
   text-transform: uppercase;
+
   a{
-    background: $indigoBlue;
     padding: 20px 30px;
     border-radius: 50px;
     min-width: 153px;
     display: inline-block;
-    color: #fff;
+    color: $white;
     overflow: hidden;
     position: relative;
     font-size: 12px;
@@ -47,21 +81,21 @@ $indigoBlue: #1D1F53;
       top: 30%;
       transition: transform 0.3s;
     }
-  }
-  &.link-arrow-green{
-    position: relative;
-    a{
-      &:hover{
-        span{
-          transform: translateX(35px);
-        }
-        &::before{
-          transform: translateX(60px);
-        }
-        &::after{
-          transform: translateX(50px);
-        }
+    &:hover{
+      span{
+        transform: translateX(35px);
       }
+      &::before{
+        transform: translateX(60px);
+      }
+      &::after{
+        transform: translateX(50px);
+      }
+    }
+  }
+
+  &.link-arrow-green{
+    a{
       &::before{
         background: url(../images/arrow-blue.png) no-repeat;
       }
@@ -70,7 +104,73 @@ $indigoBlue: #1D1F53;
       }
     }
   }
+
+  &.link-arrow-black{
+    a{
+      &::before{
+        background: url(../images/arrow-black.png) no-repeat;
+      }
+      &::after{
+        background: url(../images/arrow-black.png) no-repeat;
+      }
+    }
+  }
+
+  &.link-arrow-white{
+    a{
+      &::before{
+        background: url(../images/arrow-white.png) no-repeat;
+      }
+      &::after{
+        background: url(../images/arrow-white.png) no-repeat;
+      }
+    }
+  }
+
+
+  &.link-purple{
+    a{
+      background: $indigoBlue;
+    }
+  }
+
+  &.w-184{
+    a{
+      width: 185px;
+    }
+  }
+
+  &.w-200{
+    a{
+      width: 270px;
+    }
+  }
+
+  &.link-white{
+    a{
+      border: 1px solid rgba(29, 31, 83, 0.30);
+      color: $indigoBlue;
+      background: $white;
+      &:hover{
+        border-color: $indigoBlue;
+      }
+    }
+  }
+  
+  &.link-transparant{
+    a{
+      border: 1px solid rgba(253, 253, 253, 0.3);
+      color: $white;
+      background: transparent;
+      &:hover{
+        border-color: $white;
+      }
+    }
+  }
+
+
 }
+
 
 #header-wrapper{
   position: -webkit-sticky; /* Safari & IE */
@@ -85,14 +185,14 @@ $indigoBlue: #1D1F53;
   .column-footer{
     .block{
       .title-block{
-        color: #56E7D2;
+        color: $greenLight;
       }
       a{
         color: #fff;
       }
     }
     .after-column{
-      border-top: 1px solid #56E7D2;
+      border-top: 1px solid $greenLight;
     }
   }
 }
@@ -101,6 +201,10 @@ $indigoBlue: #1D1F53;
 .home-section-top{
   background: url(../images/bg-blue.png) no-repeat;
   background-size: cover;
+  h1{
+    font-family: 'Chronicle Display Normal';
+    font-weight: 400;
+  }
 }
 
 .home-section-2{
@@ -110,10 +214,6 @@ $indigoBlue: #1D1F53;
       font-weight: 700;
     }
     p{
-      font-family: 'Arsenal', sans-serif;
-      font-family: 'Figtree', sans-serif;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
       color: $grey;
     }
   }
