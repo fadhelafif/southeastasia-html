@@ -42,11 +42,62 @@ body{
 }
 
 // header and footer
-#header-wrapper{
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
+.navbar{
+  transition: background-position 0.3s;
+  transition: background-color 0.3s ease-in-out;
+  &.navbar-scrolled {
+    background-color: $white;
+    background-position: 0 -100vh;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #menu-menux{
+    li{
+      text-transform: uppercase;
+      font-size: 12px;
+      position: relative;
+      margin-right: 25px;
+      &:last-child{
+        margin-right: 0;
+      }
+      a{
+        color: $indigoBlue;
+        font-weight: 600;
+        display: block;
+
+        &.dropdown-toggle{
+          &::after{
+            background: url(../images/dropdown.png) no-repeat;
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: none;
+            position: absolute;
+            transition: transform 0.3s;
+          }
+          &.show{
+            &::after{
+              -webkit-transform: rotate(-180deg);
+              transform: rotate(-180deg);
+            }
+          }
+        }
+        
+      }
+      
+      .sub-menu{
+        opacity: 0; // menyembunyikan sub-menu secara default
+        transform: translateY(-20px); // menggeser sub-menu ke atas
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        li{
+          margin-right: 0;
+        }
+        &.show{
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 #footer-wrapper{
@@ -228,7 +279,7 @@ body{
     width: 100%;
     img{
       position: absolute;
-      top: 0;
+      top: 1rem;
       right: -3rem;
     }
   }

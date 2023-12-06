@@ -1,9 +1,24 @@
-console.log('\'Allo \'Allo!');
+$(document).ready(function() {
 
-// Uncomment to enable Bootstrap tooltips
-// https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
-// $(function () { $('[data-toggle="tooltip"]').tooltip(); });
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
 
-// Uncomment to enable Bootstrap popovers
-// https://getbootstrap.com/docs/4.0/components/popovers/#example-enable-popovers-everywhere
-// $(function () { $('[data-toggle="popover"]').popover(); });
+    if (scroll > 50) { // Ubah angka 100 dengan tinggi scroll ketika efek ingin dimulai
+      $(".navbar").addClass("navbar-scrolled");
+    } else {
+      $(".navbar").removeClass("navbar-scrolled");
+    }
+  });
+
+  $(".dropdown-toggle").click(function(e) {
+    e.preventDefault(); // Mencegah tautan default
+
+    $(this).toggleClass("show");
+    $(this).next('.dropdown-menu').toggleClass("show"); // Menampilkan dropdown-menu yang terkait dengan dropdown-toggle yang diklik
+
+    // Menyembunyikan dropdown-menu lain jika ada yang terbuka
+    $(".dropdown-menu").not($(this).next('.dropdown-menu')).removeClass("show");
+    $(".dropdown-toggle").not($(this)).removeClass("show");
+  });
+  
+});
