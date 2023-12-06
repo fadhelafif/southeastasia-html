@@ -100,14 +100,14 @@ function html() {
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
     .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
-      processConditionalComments: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
+      // collapseWhitespace: true,
+      // minifyCSS: true,
+      // minifyJS: {compress: {drop_console: true}},
+      // processConditionalComments: true,
+      // removeComments: true,
+      // removeEmptyAttributes: true,
+      // removeScriptTypeAttributes: true,
+      // removeStyleLinkTypeAttributes: true
     })))
     .pipe(dest('dist'));
 }
