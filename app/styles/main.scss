@@ -141,6 +141,42 @@ body{
     }
   }
 }
+
+.before-footer{
+ .title-left{
+   @media screen and (min-width:1440px) {
+     width: 40%;
+   }
+  h6{
+    color: $greenLight;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+ } 
+ .link{
+   border-bottom: 1px solid rgba(29, 31, 83, 0.15);
+   a{
+     display: block;
+     font-family: 'Chronicle Display Normal';
+     font-size: 28px;
+     font-weight: 325;
+     color: $indigoBlue;
+     text-decoration: none;
+     position: relative;
+     &::after{
+       content: '';
+       position: absolute;
+       background: url(../images/arrow-black.png) no-repeat;
+       width: 26px;
+       height: 24px;
+       right: 0;
+       top: 40%;
+     }
+   }
+ }
+}
 // end
 
 .link-button{
@@ -611,3 +647,4 @@ body{
     }
   }
 }
+
