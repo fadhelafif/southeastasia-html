@@ -651,3 +651,58 @@ body{
   }
 }
 
+
+// programmes
+.prog-section-top{
+  .title-column{
+    h1{
+      font-family: 'Chronicle Display Normal';
+      font-size: 64px;
+      font-weight: 325; 
+    }
+  }
+  .block-wrapper{
+    .img{
+      overflow: hidden;
+      position: relative;
+      a{
+        display: block;
+        &:hover{
+          img{
+            transform: scale(1.2);
+          }
+        }
+        img{
+          transition: transform 0.3s ease;
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .title{
+      margin: 10px 0;
+      a{
+        color: $indigoBlue;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 175%; /* 28px */ 
+      }
+    }
+    .desc{
+      p{
+        font-size: 14px;
+        line-height: 170%;
+      }
+    }
+    .more{
+      a{
+        color: $greenLight;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+  }
+}
