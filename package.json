@@ -10,6 +10,7 @@
     "modernizr": "^3.7.1",
     "popper.js": "^1.15.0",
     "sass": "^1.69.5",
+    "select2": "^4.1.0-rc.0",
     "surge": "^0.23.1"
   },
   "devDependencies": {
