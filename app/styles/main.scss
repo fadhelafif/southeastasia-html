@@ -3,6 +3,9 @@ $indigoBlue: #1D1F53;
 $white: #fff;
 $greenLight: #56E7D2;
 
+@import 'button/_main';
+@import 'helper/main';
+
 @font-face {
   font-family: 'Chronicle Display';
   src: url('../fonts/ChronicleDisplay-Black.eot');
@@ -81,9 +84,9 @@ body{
             }
           }
         }
-        
+
       }
-      
+
       .sub-menu{
         opacity: 0; // menyembunyikan sub-menu secara default
         transform: translateY(-20px); // menggeser sub-menu ke atas
@@ -154,7 +157,7 @@ body{
     font-size: 16px;
     letter-spacing: 1.6px;
   }
- } 
+ }
  .link{
    border-bottom: 1px solid rgba(29, 31, 83, 0.15);
    a{
@@ -281,7 +284,7 @@ body{
       }
     }
   }
-  
+
   &.link-transparant{
     a{
       border: 1px solid rgba(253, 253, 253, 0.3);
@@ -324,7 +327,7 @@ body{
       right: -3rem;
     }
   }
-  
+
 }
 
 .home-section-2{
@@ -344,9 +347,9 @@ body{
   color: $indigoBlue;
   .title-left{
     h1{
-      font-family: "Chronicle Display Normal"; 
+      font-family: "Chronicle Display Normal";
       font-size: 48px;
-      font-weight: 325; 
+      font-weight: 325;
       span{
         display: block;
       }
@@ -357,7 +360,7 @@ body{
     .title{
       h6{
         font-weight: 600;
-        font-family: Inter; 
+        font-family: Inter;
         a{
           color: $indigoBlue;
           text-decoration: none;
@@ -410,9 +413,9 @@ body{
       .center-column{
         .title{
           h1{
-            font-family: "Chronicle Display Normal"; 
+            font-family: "Chronicle Display Normal";
             font-size: 28px;
-            font-weight: 325; 
+            font-weight: 325;
             a{
               color: $white;
             }
@@ -445,8 +448,8 @@ body{
             width: 100%;
             height: auto;
           }
-          
-          
+
+
         }
       }
     }
@@ -480,7 +483,7 @@ body{
           width: 100%;
           height: auto;
         }
-      }  
+      }
     }
     .tag-wrap{
       h6{

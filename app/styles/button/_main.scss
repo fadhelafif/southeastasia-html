@@ -1,0 +1,23 @@
+.se-btn {
+  padding: 20px 30px 20px 30px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@import 'purple';
+@import 'white';
+@import 'transparent';
+@import 'arrow';
