@@ -1,0 +1,11 @@
+.se-btn-white {
+  border: 1px solid rgba($indigoBlue, 0.3);
+  color: $indigoBlue;
+  background: $white;
+
+  &:hover{
+    border-color: $indigoBlue;
+    color: $indigoBlue;
+  }
+}
+

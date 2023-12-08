@@ -1,0 +1,10 @@
+.se-btn-purple {
+  color: $white;
+  border-color: $indigoBlue;
+  background: $indigoBlue;
+
+  &:hover {
+    color: $white;
+    background: lighten($indigoBlue, 10);
+  }
+}
