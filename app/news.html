@@ -75,34 +75,41 @@
             </div>
           </div>
           <div class="row">
-            <div class="column-filter col-12 mb-5">
-              <select id="tag-filter" class="col-md-4">
-                <option value="all">FEATURED TOPICS</option>
-                <option value="energy">Energy</option>
-                <option value="circular">Circular</option>
-                <option value="suistanibility">Suistanibility</option>
-                <option value="tech">Tech</option>
-                <option value="ai">AI</option>
-                <option value="digital">Digital</option>
-                <option value="trade">Trade</option>
-                <option value="supply chain">Supply chain</option>
-                <option value="economic">Economic</option>
-              </select>
-              <select id="region-filter" class="col-md-4">
-                <option value="all">REGION</option>
-                <option value="asean">ASEAN</option>
-                <option value="global">Global</option>
-                <option value="singapore">Singapore</option>
-                <option value="thailand">Thailand</option>
-                <option value="vietnam">Vietnam</option>
-                <option value="laos">Laos</option>
-                <option value="cambodia">Cambodia</option>
-                <option value="philippines">Philippines</option>
-                <option value="brunei">Brunei</option>
-                <option value="indonesia">Indonesia</option>
-                <option value="malaysia">Malaysia</option>
-                <option value="myanmar">Myanmar</option>
-              </select>
+            <div class="column-filter w-100 mb-5">
+              <div class="row">
+                <div class="col-md-4">
+                  <select id="tag-filter" class="bg-dropdown w-100">
+                    <option value="all">FEATURED TOPICS</option>
+                    <option value="energy">Energy</option>
+                    <option value="circular">Circular</option>
+                    <option value="suistanibility">Suistanibility</option>
+                    <option value="tech">Tech</option>
+                    <option value="ai">AI</option>
+                    <option value="digital">Digital</option>
+                    <option value="trade">Trade</option>
+                    <option value="supply chain">Supply chain</option>
+                    <option value="economic">Economic</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <select id="region-filter" class="bg-dropdown w-100">
+                    <option value="all">REGION</option>
+                    <option value="asean">ASEAN</option>
+                    <option value="global">Global</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="laos">Laos</option>
+                    <option value="cambodia">Cambodia</option>
+                    <option value="philippines">Philippines</option>
+                    <option value="brunei">Brunei</option>
+                    <option value="indonesia">Indonesia</option>
+                    <option value="malaysia">Malaysia</option>
+                    <option value="myanmar">Myanmar</option>
+                  </select>
+                </div>
+              </div>
+              
               <button id="reset-filter">Remove all filters</button>
             </div>
           </div>
@@ -206,9 +213,42 @@
                 <div class="more"><a href="news-detail.html">Read More</a></div>
               </div>
             </div>
+            <div class="col-md-4 tagged-item" data-tag="suistanibility" data-region="thailand">
+              <div class="block p-4">
+                <div class="img"><a href="news-detail.html"><img src="images/thumbs_news3.jpg" alt="" class="img-fluid"></a></div>
+                <div class="tag-wrap pt-2"><h6>Topic <span>01 Jan 1970</span></h6></div>
+                <div class="title">
+                  <h2><a href="news-detail.html">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a></h2>
+                </div>
+                <div class="author"><p>by Author 1, Author 2 and Author 3</p></div>
+                <div class="more"><a href="news-detail.html">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-md-4 tagged-item" data-tag="energy" data-region="asean">
+              <div class="block p-4">
+                <div class="img"><a href="news-detail.html"><img src="images/thumbs_news1.png" alt="" class="img-fluid"></a></div>
+                <div class="tag-wrap pt-2"><h6>Topic <span>01 Jan 1970</span></h6></div>
+                <div class="title">
+                  <h2><a href="news-detail.html">Finibus bonorum et malorum</a></h2>
+                </div>
+                <div class="author"><p>by Author 1, Author 2 and Author 3</p></div>
+                <div class="more"><a href="news-detail.html">Read More</a></div>
+              </div>
+            </div>
+            <div class="col-md-4 tagged-item" data-tag="suistanibility" data-region="thailand">
+              <div class="block p-4">
+                <div class="img"><a href="news-detail.html"><img src="images/thumbs_news2.png" alt="" class="img-fluid"></a></div>
+                <div class="tag-wrap pt-2"><h6>Topic <span>01 Jan 1970</span></h6></div>
+                <div class="title">
+                  <h2><a href="news-detail.html">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit</a></h2>
+                </div>
+                <div class="author"><p>by Author 1, Author 2 and Author 3</p></div>
+                <div class="more"><a href="news-detail.html">Read More</a></div>
+              </div>
+            </div>
           </div>
           <div class="d-flex justify-content-center pt-5 pb-5">
-            <div class="all w-200 link-button link-arrow-black link-white"><a href="#"><span>view more</span></a></div>
+            <div class="all w-200 link-button link-arrow-black view-more link-white"><a href="#"><span>view more</span></a></div>
           </div>
         </div>
       </div>

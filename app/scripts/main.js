@@ -84,6 +84,31 @@ $(document).ready(function() {
   });
   
   
-  
+  // button load more content
+  var itemsToShow = 9; // Jumlah item yang ingin ditampilkan setiap kali tombol 'View More' ditekan
+  var $taggedItems = $('.tagged-item'); // Simpan elemen-elemen dengan kelas .tagged-item
+  var totalItems = $taggedItems.length; // Total item yang tersedia
+  var visibleItems = itemsToShow; // Jumlah item yang sudah ditampilkan
+
+  // Sembunyikan semua item yang berada setelah jumlah itemsToShow pertama
+  $taggedItems.slice(itemsToShow).addClass('hidden');
+
+  // Event handler untuk tombol 'View More'
+  $('.view-more').on('click', function(e) {
+    e.preventDefault();
+
+    // Tampilkan item-item tambahan saat tombol 'View More' ditekan
+    $taggedItems.slice(visibleItems, visibleItems + itemsToShow).removeClass('hidden');
+
+    // Perbarui jumlah item yang sudah ditampilkan
+    visibleItems += itemsToShow;
+
+    // Jika semua item sudah ditampilkan, sembunyikan tombol 'View More'
+    if (visibleItems >= totalItems) {
+      $(this).hide();
+    }
+  });
+
+
   
 });
