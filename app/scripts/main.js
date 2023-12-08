@@ -6,8 +6,14 @@ $(document).ready(function() {
 
     if (scroll > 50) { // Ubah angka 100 dengan tinggi scroll ketika efek ingin dimulai
       $('.navbar').addClass('navbar-scrolled');
+      $('.nav-bg-transparant').removeClass('color-white');
+      $('.logo-white').addClass('d-none');
+      $('.logo-black').removeClass('d-none');
     } else {
       $('.navbar').removeClass('navbar-scrolled');
+      $('.nav-bg-transparant').addClass('color-white');
+      $('.logo-white').removeClass('d-none');
+      $('.logo-black').addClass('d-none');
     }
   });
 
