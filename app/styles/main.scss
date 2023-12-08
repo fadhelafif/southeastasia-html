@@ -45,6 +45,41 @@ body{
   background: var(--Gradient-Mint, linear-gradient(248deg, rgba(86, 231, 209, 0.28) 0%, rgba(86, 231, 210, 0.16) 16.15%, rgba(86, 231, 210, 0.12) 33.39%, rgba(86, 231, 210, 0.07) 67.92%, rgba(86, 231, 210, 0.05) 100%), #FFF);
 }
 
+// select2
+/* Hapus gaya default dari Select2 */
+.select2-container {
+  width: 100%;
+  padding: 0;
+}
+
+/* Atur gaya border bawah untuk input Select2 */
+.select2-container .select2-selection--single {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  height: auto;
+  padding: 5px 0;
+  background: transparent;
+}
+
+/* Atur warna teks saat dipilih */
+.select2-container .select2-selection--single .select2-selection__rendered {
+  color: #333;
+}
+
+/* Stylize focus state */
+.select2-container--focus .select2-selection--single {
+  outline: none;
+  box-shadow: none;
+  border-color: #aaa;
+}
+
+/* Tampilkan arrow (tanda panah) */
+.select2-container .select2-selection__arrow {
+  border-color: #aaa transparent transparent transparent;
+  top: 7px; /* Sesuaikan posisi panah */
+}
+
+
 // header and footer
 .navbar{
   transition: background-position 0.3s;
@@ -745,6 +780,80 @@ body{
     .desc{
       p{
         line-height: 175%;
+      }
+    }
+  }
+}
+
+
+// news
+
+.news-section-top{
+  .tagged-item {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .hidden {
+    display: none; /* Menyembunyikan elemen yang tidak sesuai dengan filter */
+  }
+  .title-column{
+    h1{
+      font-family: 'Chronicle Display Normal';
+      font-size: 64px;
+      font-weight: 325; 
+    }
+  }
+  .block{
+    border-left: 1px solid rgba(29, 31, 83, 0.15);
+    @media screen and (min-width:1440px) {
+      padding-right: 0 !important;
+    }
+    .img{
+      overflow: hidden;
+      position: relative;
+      a{
+        display: block;
+        &:hover{
+          img{
+            transform: scale(1.2);
+          }
+        }
+        img{
+          transition: transform 0.3s ease;
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }  
+    }
+    .tag-wrap{
+      h6{
+        color: $indigoBlue;
+        span{
+          font-weight: 300;
+          color: #757880B2;
+          margin-left: 10px;
+        }
+      }
+    }
+    .title{
+      h2{
+        font-family: 'Chronicle Display Normal';
+        font-weight: 325;
+        font-size: 21px;
+        a{
+          color: $indigoBlue;
+        }
+      }
+    }
+    .author{
+      font-size: 12px;
+    }
+    .more{
+      font-size: 12px;
+      a{
+        color: $greenLight;
+        text-transform: uppercase;
       }
     }
   }
