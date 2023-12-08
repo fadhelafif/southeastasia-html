@@ -1,0 +1,10 @@
+.se-btn-transparent {
+  border: 1px solid rgba($white, 0.3);
+  color: $white;
+
+  &:hover{
+    border-color: $white;
+    color: $white;
+  }
+}
+
