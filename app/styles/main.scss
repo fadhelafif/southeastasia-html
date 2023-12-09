@@ -404,7 +404,7 @@ body{
     h1{
       font-family: 'Chronicle Display Normal';
       font-weight: 325;
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 1px;
       line-height: 164%;
     }
@@ -413,11 +413,8 @@ body{
     display: inline-block;
     height: 100%;
     width: 100%;
-    img{
-      position: absolute;
-      top: 1rem;
-      right: -3rem;
-    }
+    position: absolute;
+    right: -3rem;
   }
 
 }
@@ -446,6 +443,10 @@ body{
         display: block;
       }
     }
+  }
+  .text-black{
+    color: $indigoBlue !important;
+    font-weight: 600;
   }
   .column-list{
     border-bottom: 1px solid rgba(29, 31, 83, 0.15);
@@ -527,6 +528,9 @@ body{
       .img{
         overflow: hidden;
         position: relative;
+        @media screen and (max-width:768px){
+          margin-top: 10px;
+        }
         a{
           display: block;
           &:hover{
@@ -795,6 +799,30 @@ body{
         font-size: 16px;
         font-family: 'Inter', sans-serif;
       }
+    }
+  }
+}
+.prog-detail-top{
+  .left-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+  }
+  .title-column{
+    h1{
+      font-family: 'Chronicle Display Normal';
+      font-size: 64px;
+      font-weight: 325;
+    }
+  }
+  .section-title{
+    h6{
+      color: $greenLight;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
     }
   }
 }
