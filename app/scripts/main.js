@@ -28,6 +28,14 @@ $(document).ready(function() {
     $('.dropdown-menu').not($(this).next('.dropdown-menu')).removeClass('show');
     $('.dropdown-toggle').not($(this)).removeClass('show');
   });
+  // Ketika terjadi klik di luar dropdown-toggle dan dropdown-menu
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.dropdown-toggle').length && !$(e.target).closest('.dropdown-menu').length) {
+      // Menyembunyikan semua dropdown-menu
+      $('.dropdown-menu').removeClass('show');
+      $('.dropdown-toggle').removeClass('show');
+    }
+  });
 
   // select2
   $('#tag-filter, #region-filter').select2({
