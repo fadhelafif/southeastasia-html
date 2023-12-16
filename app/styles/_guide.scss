@@ -1,0 +1,19 @@
+.g-colors {
+  display: flex;
+  gap: 10px;
+}
+
+.g-color {
+  width: 175px;
+  height: 50px;
+  border: 1px solid #000;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.g-color-dark{
+  color: #fff;
+}
