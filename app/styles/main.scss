@@ -76,6 +76,30 @@ body{
   padding: 0;
 }
 
+
+.select2-checkbox{
+  margin-right: 10px;
+}
+
+.select2-option{
+  display: block;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+  border-radius: 50px;
+  background: none !important;
+  margin: 10px 5px;
+  padding: 5px 25px 5px 10px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+  height: 100%;
+  border: none;
+  right: 0;
+  left: auto;
+  padding-right: 10px;
+}
+
 /* Atur gaya border bawah untuk input Select2 */
 .select2-container .select2-selection--single {
   border: none;
@@ -911,7 +935,13 @@ body{
 
 // news
 .news-section-top{
-  .select2-container .select2-selection__arrow {
+  .news-section-top .select2-container--default .select2-selection--multiple{
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+  }
+  .select2-container--default .select2-selection--multiple {
     background-image: url('../images/dropdown.png'); /* Ganti dengan path lokasi gambar panah Anda */
     background-repeat: no-repeat;
     background-position: center right;
@@ -919,6 +949,10 @@ body{
     height: 100%; /* Sesuaikan tinggi panah jika perlu */
     margin-right: 10px; /* Sesuaikan margin jika perlu */
     transition: transform 0.3s ease;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0;
   }
   .select2-container--open .select2-selection__arrow {
     transform: rotate(180deg);
@@ -1000,6 +1034,34 @@ body{
 .our-work-section-top{
   background: $indigoBlue;
   color: $white;
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    color: #fff;
+  }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover{
+    background-color: transparent !important;
+    color: #fff;
+  }
+  
+  .select2-container--default .select2-search--inline .select2-search__field{
+    color: $greenLight;
+  }
+  .select2-container--default .select2-selection--multiple{
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-image: url('../images/arrow-greenlight.png'); /* Ganti dengan path lokasi gambar panah Anda */
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 15px; /* Sesuaikan ukuran panah jika perlu */
+    height: 100%; /* Sesuaikan tinggi panah jika perlu */
+    margin-right: 10px; /* Sesuaikan margin jika perlu */
+    transition: transform 0.3s ease;
+    color: #fff;
+    outline: none;
+    border-radius: 0;
+  }
   .select2-container .select2-selection--single .select2-selection__rendered{
     color: $greenLight;
   }

@@ -38,64 +38,94 @@ $(document).ready(function() {
   });
 
   // select2
-  $('#tag-filter, #region-filter').select2({
+  // $('#tag-filter').select2({
+  //   minimumResultsForSearch: -1,
+  //   dropdownCssClass: 'border-bottom-only',
+  //   placeholder: 'SELECT TOPICS OR REGION',
+  //   multiple: true,
+  //   selectOnClose: true
+  // });
+
+  $('#tag-filter').select2({
     minimumResultsForSearch: -1,
-    dropdownCssClass: 'border-bottom-only'
-  });
-  
-  function filterItems() {
-    var selectedTag = $('#tag-filter').val();
-    var selectedRegion = $('#region-filter').val();
-  
-    $('.tagged-item').addClass('hidden');
-  
-    if (selectedTag === 'all' && selectedRegion === 'all') {
-      $('.tagged-item').removeClass('hidden');
-    } else {
-      $('.tagged-item').each(function() {
-        var tags = $(this).data('tag');
-        var regions = $(this).data('region');
-  
-        if ((selectedTag === 'all' || tags === selectedTag) && (selectedRegion === 'all' || regions === selectedRegion)) {
-          $(this).removeClass('hidden');
+    dropdownCssClass: 'border-bottom-only',
+    placeholder: 'SELECT TOPICS OR REGION',
+    multiple: true,
+    templateResult: function (data) {
+        if (!data.element) {
+            return data.text;
         }
-      });
+        var $element = $(data.element);
+        var $wrapper = $('<span></span>');
+        $wrapper.addClass('select2-option');
+
+        var $checkbox = $('<input type="checkbox" class="select2-checkbox" />');
+        $checkbox.prop('checked', $element.prop('selected'));
+        $wrapper.append($checkbox);
+
+        var $text = $('<span></span>');
+        $text.text(data.text);
+        $wrapper.append($text);
+
+        return $wrapper;
+    },
+    templateSelection: function (data) {
+        if (!data.element) {
+            return data.text;
+        } else {
+            return $('<span>' + data.text + '</span>');
+        }
     }
-  
-    // Tampilkan tombol reset jika ada filter yang dipilih
-    var anyFilterSelected = selectedTag !== 'all' || selectedRegion !== 'all';
-    if (anyFilterSelected) {
-      $('#reset-filter').show();
-    } else {
+  }).on('select2:select', function (e) {
+    $(this).select2('open'); // Buka kembali dropdown setelah opsi dipilih
+});
+
+
+  function showAllItems() {
+      $('.tagged-item').removeClass('hidden');
       $('#reset-filter').hide();
-    }
   }
-  
+
+  function filterItems() {
+      var selectedTags = $('#tag-filter').val();
+
+      if (!selectedTags || selectedTags.length === 0) {
+          showAllItems();
+          return;
+      }
+
+      $('.tagged-item').addClass('hidden');
+
+      selectedTags.forEach(function(selectedTag) {
+          $('.tagged-item[data-tag="' + selectedTag + '"]').removeClass('hidden');
+      });
+
+      $('#reset-filter').show();
+  }
+
   // Sembunyikan tombol reset saat halaman dimuat
   $('#reset-filter').hide();
-  
+
   // Tampilkan semua elemen saat halaman dimuat
-  filterItems();
-  
+  showAllItems();
+
   // Filter elemen saat tag dipilih berubah
   $('#tag-filter').on('change', function() {
-    filterItems();
+      filterItems();
   });
-  
-  // Filter elemen saat region dipilih berubah
-  $('#region-filter').on('change', function() {
-    filterItems();
-  });
-  
+
   // Event handler untuk tombol Reset Filter
   $('#reset-filter').on('click', function() {
-    $('#tag-filter, #region-filter').val('all').trigger('change');
+      $('#tag-filter').val(null).trigger('change');
+      showAllItems();
   });
-  
+
   // Reset filter saat halaman dimuat ulang
   $(window).on('load', function() {
-    $('#tag-filter, #region-filter').val('all').trigger('change');
+      $('#tag-filter').val(null).trigger('change');
+      showAllItems();
   });
+
   
   
   // button load more content
