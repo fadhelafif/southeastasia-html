@@ -5,6 +5,7 @@ $greenLight: #56E7D2;
 
 @import 'button/_main';
 @import 'helper/main';
+@import 'guide';
 
 @font-face {
   font-family: 'Chronicle Display';
@@ -161,7 +162,7 @@ body{
         a{
           color: $white;
           font-weight: 325;
-          
+
           &.dropdown-toggle{
             &::after{
               background: url(../images/arrow-greenlight.png) no-repeat;
@@ -190,7 +191,7 @@ body{
         }
       }
     }
-    
+
   }
   #menu-menux{
     li{
@@ -892,7 +893,7 @@ body{
     p{
       margin-top: 20px;
       font-size: 13px;
-      line-height: 170%; /* 23.8px */ 
+      line-height: 170%; /* 23.8px */
     }
   }
 }
@@ -968,7 +969,7 @@ body{
     h1{
       font-family: 'Chronicle Display Normal';
       font-size: 64px;
-      font-weight: 325; 
+      font-weight: 325;
     }
   }
   .block{
@@ -993,7 +994,7 @@ body{
           width: 100%;
           height: auto;
         }
-      }  
+      }
     }
     .tag-wrap{
       h6{
@@ -1089,7 +1090,7 @@ body{
     h1{
       font-family: 'Chronicle Display Normal';
       font-size: 64px;
-      font-weight: 325; 
+      font-weight: 325;
     }
   }
   .list-column-wrapper{
@@ -1198,7 +1199,7 @@ body{
   }
   .content-text{
     p{
-      line-height: 175%; 
+      line-height: 175%;
     }
   }
 }
@@ -1245,7 +1246,7 @@ body{
     ul{
       li{
         list-style: none;
-        line-height: 170%; /* 23.8px */ 
+        line-height: 170%; /* 23.8px */
         span{
           width: 16px;
           display: inline-block;
